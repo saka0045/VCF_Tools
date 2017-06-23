@@ -53,7 +53,6 @@ def compare_vcf(old_vcf_dict, cava_vcf_dict, old_unique_region_file):
     cava_vcf_region = set(cava_vcf_dict.keys())
     different_region = old_vcf_region.difference(cava_vcf_region)
     sorted_different_region = sorted(different_region, key=lambda region: float(region))
-    print(sorted_different_region)
     outputfile = open(old_unique_region_file, 'w')
     
     for region in sorted_different_region:
